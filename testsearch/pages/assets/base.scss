@@ -1,0 +1,28 @@
+body {
+  margin: 0rem;
+  padding: 0rem;
+}
+.container {
+  display: grid;
+  grid-template-columns: 0.2fr 1fr 0.2fr;
+  grid-template-rows: 0.5fr;
+  gap: 0px 0px;
+  grid-template-areas:
+    ". container__elements .";
+  background-color: #eeeeee;
+}
+.container__elements {
+  grid-area: container__elements;
+  height: 3.5rem;
+  display: flex;
+  > div {
+    display: inline-flex;
+    flex: 1;
+  }
+}
+
+.container__data {
+  grid-area: container__elements;
+  display: flex;
+  flex-direction: column;
+}

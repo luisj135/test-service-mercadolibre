@@ -1,0 +1,72 @@
+.container__item{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width:100%;
+    padding: 1rem 0rem;
+    border-bottom: 1px solid #f7f7f7;
+    > div{
+        flex: 1;
+
+    }
+    .container__images{
+        position: relative;
+        flex: 1;
+        flex-grow: 2;
+        max-width: 11.125rem;
+        min-height: 11.125rem;
+    }
+    .container__properties{
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        flex-grow: 3;
+        padding: 1.125rem 0.5rem;
+        .container__txt{
+            display: flex;
+            flex-direction: column;
+            .block__value{
+                position: relative;
+
+            }
+            .block__value.shipping_ico {
+                p {
+                    display: inline;
+                    position: relative;
+                    padding-right: 1rem;
+                }
+                p:after{
+                    content: '';
+                    background-image: url('/assets/ic_shipping.png');
+                    width: 18px;
+                    height: 18px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0%;
+                    transform: translate(50%, -50%);
+                }
+            }
+        }
+    }
+    .container__city{
+        display: flex;
+        justify-content: center;
+        align-content: center;
+        p {
+            display: flex;
+            text-align: center;
+            align-items: center;
+        }
+    }
+}
+
+.container__list_items{
+    background-color: #ffffff;
+    border-radius: 5px;
+    padding: 1.063rem;
+}
+
+.container__item:last-child{
+    border-bottom: none;
+}

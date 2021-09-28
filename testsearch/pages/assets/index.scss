@@ -1,0 +1,52 @@
+$heigthdefault: 3.5rem;
+
+header {
+  height: $heigthdefault;
+  background-color: ffe600;
+  position: relative;
+  .brand_logo{
+    position: relative;
+  }
+  .search_items{
+    flex-grow: 8;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+  }
+  .content__search{
+    width: 100%;
+    height: $heigthdefault;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    input {
+      border: none;
+      border-radius: 5px;
+      width: 100%;
+      padding: 0.5rem 1rem;
+      box-sizing: border-box;
+    }
+    .input__search{
+        flex-grow: 18;
+    }
+    .btn__search{
+      flex-grow: 1;
+      position: relative;
+      box-sizing: border-box;
+      height: 100%;
+      button {
+        width: 100%;
+        border: none;
+      }
+      div {
+        margin: 0.8rem 0rem !important;
+        background-color: #eeeeee;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.container.header{
+  background-color: #ffe600;
+}
