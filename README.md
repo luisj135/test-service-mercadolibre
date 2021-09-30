@@ -1,5 +1,4 @@
 # TestSearch is a frontend test
-DEMO 👉 https://example-frontend-next-js.sanity-io.now.sh
 
 This is a project frontend to test search with api mercadolibre with Next.js. and Express
 
@@ -42,6 +41,8 @@ Then start the project app with:
 ```
 npm run start
 ```
+
+The app should now be up and running at http://localhost:5000 🚀
 
 
 # TestSearch
