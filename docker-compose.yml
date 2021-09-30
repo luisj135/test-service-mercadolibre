@@ -1,0 +1,27 @@
+version: "3.8"
+services:
+  nodeserver:
+    build:
+        context: ./api
+    ports:
+        - "5000:5000"
+    networks:
+        - net
+  nodeweb:
+    build:
+        context: ./testsearch
+    ports:
+        - "3000:3000"
+    networks:
+        - net
+  nginx:
+    restart: always
+    build:
+        context: ./infra/nginx
+    ports:
+        - "80:80"
+    networks:
+        - net
+networks:
+  net:
+    driver: bridge

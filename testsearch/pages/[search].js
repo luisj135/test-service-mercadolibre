@@ -50,7 +50,7 @@ export async function getServerSideProps(context) {
   const { params, res} = context;
   const { search } = params
 
-  const apiResponse = await fetch(`http://localhost:5000/api/items?q=${search}`);
+  const apiResponse = await fetch(`http://nodeserver:5000/api/items?q=${search}`);
   if (apiResponse.ok){
     const props = await apiResponse.json();
     return { props };
