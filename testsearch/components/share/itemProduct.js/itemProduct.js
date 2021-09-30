@@ -1,12 +1,15 @@
 import Head from 'next/head'
-import ImageComponent from '../../share/image/image';
+import ImageComponent from '../image/image';
 
-export default function ItemProduct() {
+export default function ItemProduct({img, title, value, state, freeShipping=false}) {
+  const showIco = (freeShipping) ? 'shipping_ico' : '';
+  const locale = Intl.NumberFormat(value.currency)
+  const price = locale.format(value.amount);
   return (
     <div className="container__item">
       <div className="container__images">
         <ImageComponent
-          src="/assets/product_image.png"
+          src={img}
           alt="product"
           width="180"
           height="180"
@@ -16,18 +19,18 @@ export default function ItemProduct() {
       </div>
       <div className="container__properties">
         <div className="container__txt">
-          <div className="block__value shipping_ico">
-            <p>$1.980</p>
+          <div className={`block__value ${showIco}`}>
+            <p>{price}</p>
           </div>
           <div className="block__txt">
             <p>
-              Radio Android 9 Pantalla 10 Pulgadas Wifi Gps 2 Din Cámara
+              {title}
             </p>
           </div>
         </div>
       </div>
       <div className="container__city">
-        <p>Capital Federal</p>
+        <p>{state}</p>
       </div>
     </div>
   )

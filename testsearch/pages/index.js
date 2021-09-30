@@ -1,5 +1,5 @@
 import Head from 'next/head'
-import HeaderComponent from './components/share/header/header'
+import HeaderComponent from '../components/share/header/header'
 
 export default function Home() {
   return (

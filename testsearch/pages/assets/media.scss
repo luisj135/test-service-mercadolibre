@@ -1,0 +1,26 @@
+
+@media only screen
+  and (min-device-width: 319px)
+    and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+    .container {
+      grid-template-columns: auto;
+    }
+    .container__list_items{
+        padding: 0.6rem;
+    }
+    .content__bread__cumbs{
+        padding-left: 0.5rem !important;
+    }
+    .container__item{
+        .container__images{
+            flex-grow: 1;
+            & div {
+                width: 65px !important;
+            }
+        }
+        .container__properties{
+            flex-grow: 3;
+        }
+    }
+}

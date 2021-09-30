@@ -11,6 +11,13 @@
             position: relative;
             display: flex;
             min-height: 31.5rem;
+            div {
+                width: 100% !important;
+                height: 100% !important;
+                img {
+                    width: 367px !important;
+                }
+            }
         }
         .block__detail{
             text-align: justify;
@@ -22,6 +29,9 @@
         color: #464646;
         .block__numberitems{
             font-size: 10px;
+            span {
+                text-transform: uppercase;
+            }
         }
         .block__titles{
             font-size: 2rem;

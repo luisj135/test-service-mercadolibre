@@ -9,6 +9,7 @@
         flex:1;
         justify-content: flex-start;
         margin: 1rem 0rem;
+        padding: 0rem;
         li {
           list-style-type: none;
           position: relative;
@@ -20,6 +21,13 @@
             top: 50%;
             right: 0%;
             transform: translate(50%, -50%);
+        }
+        li:first-child{
+            padding-left: 0rem;
+        }
+        li:last-child{
+            color: #a3a3a3;
+            font-weight: bold;
         }
         li:last-child::after{
             display:none;

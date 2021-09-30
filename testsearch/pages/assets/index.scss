@@ -2,10 +2,14 @@ $heigthdefault: 3.5rem;
 
 header {
   height: $heigthdefault;
-  background-color: ffe600;
+  background-color: #ffe600;
   position: relative;
   .brand_logo{
     position: relative;
+    height: inherit !important;
+    div {
+      height: inherit !important;
+    }
   }
   .search_items{
     flex-grow: 8;
@@ -21,10 +25,21 @@ header {
     align-content: center;
     input {
       border: none;
-      border-radius: 5px;
+      border-radius: 5px 0px 0px 5px;
       width: 100%;
       padding: 0.5rem 1rem;
       box-sizing: border-box;
+      &:focus {
+        outline: none;
+      }
+    }
+    form {
+      display: flex;
+      width: 100%;
+      height: inherit;
+      justify-content: center;
+      align-content: center;
+      align-items: center;
     }
     .input__search{
         flex-grow: 18;
@@ -33,15 +48,21 @@ header {
       flex-grow: 1;
       position: relative;
       box-sizing: border-box;
-      height: 100%;
+      height: 1.9rem;
+      margin: 1px 0px 0px;
+      width: 2.625rem;
       button {
-        width: 100%;
+        width: inherit;
         border: none;
-      }
-      div {
-        margin: 0.8rem 0rem !important;
+        height: inherit;
         background-color: #eeeeee;
-        width: 100%;
+        padding: 0rem;
+        div {
+          margin: 0.8rem 0rem !important;
+          width: inherit !important;
+          height: 1.9rem !important;
+          margin: 0rem !important;
+        }
       }
     }
   }
